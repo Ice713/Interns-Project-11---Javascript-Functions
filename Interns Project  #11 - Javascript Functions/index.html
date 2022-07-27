@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interns Project  #11 - Javascript Functions</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <section>
+        <h1>Interns Project  #11 - Javascript Functions</h1>
+    </section>
+
+    <section>
+        <form action="">
+            <h3>1. Write a JavaScript function that reverse a number.</h3>
+            <p>
+                Example x = 32243;<br>      
+                <i>Expected Output:</i><br>                
+                34223
+            </p>
+            <label for="number1">INPUT:</label>
+            <input type="text" name="number1" id="number1" placeholder="Type some numbers" oninput="problem1(this.value)" onchange="problem1(this.value)" >
+            <p>OUTPUT: <span id="output1"></span></p>
+        </form>
+    </section>
+
+    <section>
+        <form action="">
+            <h3>2. Write a JavaScript function that checks whether a passed string is palindrome or not? A palindrome is word, phrase, or sequence that reads the same backward as forward, e.g., madam or nurses run.</h3>
+
+            <label for="number2">INPUT:</label>
+            <input type="text" name="number2" id="number2" placeholder="Type some words" oninput="problem2(this.value)" onchange="problem2(this.value)" >
+            <p>OUTPUT: <span id="output2"></span></p>
+        </form>
+    </section>
+
+    <section>
+        <form action="">
+            <h3>3.Write a JavaScript function that generates all combinations of a string.</h3>
+            <p>
+                <i>Example string :</i><br>
+                'dog'<br>
+                <i>Expected Output :</i><br>
+                d, o, do, g, dg, og, dog
+            </p>
+
+            <label for="number3">INPUT:</label>
+            <input type="text" name="number3" id="number3" placeholder="Type some words" oninput="problem3(this.value)" onchange="problem3(this.value)" >
+            <p>OUTPUT: <span id="output3"></span></p>
+        </form>
+    </section>
+
+    <section>
+        <form action="">
+            <h3>4. Write a JavaScript function that returns a passed string with letters in alphabetical order.</h3>
+            <p>
+                <i>Example string :</i><br>
+                'webmaster'<br>
+                <i>Expected Output :</i><br>
+                'abeemrstw'<br>
+                Assume punctuation and numbers symbols are not included in the passed string.
+            </p>
+
+            <label for="number4">INPUT:</label>
+            <input type="text" name="number4" id="number4" placeholder="Type some words" oninput="problem4(this.value)" onchange="problem4(this.value)" >
+            <p>OUTPUT: <span id="output4"></span></p>
+        </form>
+    </section>
+
+    <section>
+        <form action="">
+            <h3>5.Write a JavaScript function that accepts a string as a parameter and converts the first letter of each word of the string in upper case.</h3>
+            <p>
+                <i>Example string :</i><br>
+                'the quick brown fox'<br>
+                <i>Expected Output :</i><br>
+                'The Quick Brown Fox '
+            </p>
+
+            <label for="number5">INPUT:</label>
+            <input type="text" name="number5" id="number5" placeholder="Type some words" oninput="problem5(this.value)" onchange="problem5(this.value)" >
+            <p>OUTPUT: <span id="output5"></span></p>
+        </form>
+    </section>
+
+    <section>
+        <form action="">
+            <h3>6.Write a JavaScript function that accepts a string as a parameter and find the longest word within the string.</h3>
+            <p>
+                <i>Example string :</i><br>
+                'Web Development Tutorial'<br>
+                <i>Expected Output :</i><br>
+                'Development'
+            </p>
+
+            <label for="number6">INPUT:</label>
+            <input type="text" name="number6" id="number6" placeholder="Type some words" oninput="problem6(this.value)" onchange="problem6(this.value)" >
+            <p>OUTPUT: <span id="output6"></span></p>
+        </form>
+    </section>
+    
+    <section>
+        <form action="">
+            <h3>7.Write a JavaScript function that accepts a string as a parameter and counts the number of vowels within the string.</h3>
+            <p>
+                Note : As the letter 'y' can be regarded as both a vowel and a consonant, we do not count 'y' as vowel here.<br>
+                <i>Example string :</i><br>
+                'The quick brown fox'<br>
+                <i>Expected Output :</i><br>
+                5
+            </p>
+
+            <label for="number7">INPUT:</label>
+            <input type="text" name="number7" id="number7" placeholder="Type some words" oninput="problem7(this.value)" onchange="problem7(this.value)" >
+            <p>OUTPUT: <span id="output7"></span></p>
+        </form>
+    </section>
+    
+    <section>
+        <form action="">
+            <h3>8.Write a JavaScript function that accepts a number as a parameter and check the number is prime or not.</h3>
+            <p>
+                Note : A prime number (or a prime) is a natural number greater than 1 that has no positive divisors other than 1 and itself.
+            </p>
+
+            <label for="number8">INPUT:</label>
+            <input type="text" name="number8" id="number8" placeholder="Type some numbers" oninput="problem8(this.value)" onchange="problem8(this.value)" >
+            <p>OUTPUT: <span id="output8"></span></p>
+        </form>
+    </section>
+    
+    <section>
+        <form action="">
+            <h3>9.Write a JavaScript function which accepts an argument and returns the type.</h3>
+            <p>
+                Note : There are six possible values that typeof returns: object, boolean, function, number, string, and undefined.
+            </p>
+
+            <label for="number9">INPUT:</label>
+            <input type="text" name="number9" id="number9" placeholder="Type some numbers" oninput="problem9(this.value)" onchange="problem9(this.value)" >
+            <p>OUTPUT: <span id="output9"></span></p>
+        </form>
+    </section>
+
+    <section>
+        <form action="">
+            <h3>10.Write a JavaScript function which will take an array of numbers stored and find the second lowest and second greatest numbers, respectively.</h3>
+            <p>
+                <i>Sample array :</i><br>
+                [1,2,3,4,5] <br>
+                <i>Expected Output :</i><br>
+                2,4
+            </p>
+
+            <label for="number9">INPUT:</label>
+            <input type="text" name="number9" id="number9" placeholder="Type some numbers" oninput="problem9(this.value)" onchange="problem9(this.value)" >
+            <p>OUTPUT: <span id="output9"></span></p>
+        </form>
+    </section>
+
+
+    <script src="main.js"></script>
+</body>
+</html>
