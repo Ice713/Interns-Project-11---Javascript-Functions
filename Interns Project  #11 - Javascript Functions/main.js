@@ -163,3 +163,145 @@ function problem9(input9){
     }
 }
 
+
+
+function problem10(input10){       
+    if (input10 == ""){
+        document.getElementById("output10").innerHTML = "";
+    }else{
+        let text = input10;
+        const arr_num = text.split(",");
+
+        arr_num.sort(function(x,y)
+                {
+                return x-y;
+                });
+        var uniqa = [arr_num[0]];
+        var result = [];
+
+        for(var j=1; j < arr_num.length; j++)
+        {
+        if(arr_num[j-1] !== arr_num[j])
+        {
+        uniqa.push(arr_num[j]);
+        }
+        }
+        result.push(uniqa[1],uniqa[uniqa.length-2]);
+        document.getElementById("output10").innerHTML = result.join(',');
+
+        
+    }
+}
+
+function amountTocoins(amount, coins) 
+{
+ if (amount === 0) 
+  {
+     return [];
+   } 
+ else
+   {
+     if (amount >= coins[0]) 
+       {
+        left = (amount - coins[0]);
+        return [coins[0]].concat( amountTocoins(left, coins) );
+        } 
+      else
+        {
+         coins.shift();
+         return amountTocoins(amount, coins);
+        }
+    }
+} 
+
+function problem11(input11){       
+    if (input11 == ""){
+        document.getElementById("output11").innerHTML = "";
+    }else{        
+        const input_array = input11.split(":");
+        const coins = input_array[1].split(",").map(function(item) {
+            return parseInt(item, 10);
+        });
+        var amount = input_array[0];
+             
+        document.getElementById("output11").innerHTML = amountTocoins(amount, coins);
+    }
+}
+
+
+
+function problem12(input12){       
+    if (input12 == ""){
+        document.getElementById("output12").innerHTML = "";
+    }else{
+        var uchars = {};
+        input12.replace(/\S/g, function(l){uchars[l] = (isNaN(uchars[l]) ? 1 : uchars[l] + 1);});
+        
+        document.getElementById("output12").innerHTML = JSON.stringify(uchars);
+    }
+}
+
+function problem13(input13){       
+    if (input13 == ""){
+        document.getElementById("output13").innerHTML = "";
+    }else{
+        var text = "";
+        var char_list = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+";
+        for(var i=0; i < input13; i++ )
+        {  
+        text += char_list.charAt(Math.floor(Math.random() * char_list.length));
+        }
+        
+        document.getElementById("output13").innerHTML = text;
+    }
+}
+
+function problem14(input14){       
+    if (input14 == ""){
+        document.getElementById("output14").innerHTML = "";
+    }else{
+        const input_array = input14.split(" ");
+        var letter_Count = 0;
+        for (var position = 0; position < input_array[0].length; position++) 
+        {
+           if (input_array[0].charAt(position) == input_array[input_array.length-1]) 
+             {
+             letter_Count += 1;
+             }
+         }
+        //  return letter_Count;
+        
+        document.getElementById("output14").innerHTML = letter_Count;
+    }
+}
+
+
+
+function problem15(input15){       
+    if (input15 == ""){
+        document.getElementById("output15").innerHTML = "";
+    }else{
+        var arra1 = input15.split('');
+        var result = '';
+        var ctr = 0;
+        
+        for (var x = 0; x < arra1.length; x++) {
+            ctr = 0;
+        
+            for (var y = 0; y < arra1.length; y++) 
+            {
+            if (arra1[x] === arra1[y]) {
+                ctr+= 1;
+            }
+            }
+        
+            if (ctr < 2) {
+            result = arra1[x];
+            break;
+            }
+        }
+        // return result;
+        
+        document.getElementById("output15").innerHTML = result;
+    }
+}
